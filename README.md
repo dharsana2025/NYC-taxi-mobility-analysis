@@ -1,13 +1,81 @@
-🚖# NYC Taxi Data Analysis (2026) – HVFHV 
+# 🚖 NYC Taxi Data Analysis (2026) – HVFHV Focus
 
-FocusThe Analysis of High-Volume For Hire-Vehichle(HVFHV) mobility patterns in New York City. The objective was to examine how traffic flows, how much revenue is generated, and how well the services meet the needs of all passengers, including those requiring wheelchair-accessible vehicles. 
-Analysing mobility of New York Taxi, in the impact of high volume for hire vehicle, providing view for traffic trends in city, service provider impact, social awareness, geospatial analysis
+## 📌 Project Overview
 
+This project analyzes High-Volume For-Hire Vehicle (HVFHV) trip data for 2026 to understand ride demand, operational efficiency, and revenue patterns in urban transportation.
 
+The goal is to extract actionable insights that could help ride-hailing platforms optimize pricing, improve vehicle utilization, and enhance customer experience.
 
-📊 Key Performance Indicators (KPIs)
-Service Availability: A significant supply-demand mismatch occurs between 04:00 and 08:00. Despite lower total demand, average wait times are at their daily peak, indicating an opportunity for driver shift optimization.
+---
 
-Revenue Logistics: The platform take-rate is established at 21.77%. The remaining revenue is distributed across driver earnings, mandatory taxes, and congestion pricing fees.
+## 🎯 Business Objectives
 
-Accessibility & ESG: Wheelchair Accessible Vehicle (WAV) utilization stands at 5.52%, while carpool fulfillment reached 8.03% during the reporting period.
+* Identify peak demand periods (daily, weekly, seasonal)
+* Analyze trip distance vs fare relationships
+* Evaluate revenue distribution across locations
+* Detect inefficiencies such as low-value or idle trips
+
+---
+
+## 🛠️ Tools & Technologies
+
+* Python (Pandas, NumPy, Matplotlib/Seaborn)
+* SQL (for querying large datasets)
+* Excel (initial exploration)
+* Power BI / Tableau (for dashboards)
+
+---
+
+## 📊 Key Analysis Performed
+
+* Exploratory Data Analysis (EDA) on trip volume and fare trends
+* Time-based analysis to identify peak hours and seasonal demand
+* Location-based analysis to find high-demand zones
+* Revenue analysis to understand pricing patterns
+* Outlier detection (cancellations, abnormal fares, long idle trips)
+
+---
+
+## 📈 Key Insights
+
+* Peak demand observed during [insert your finding]
+* Short-distance trips contribute significantly to total ride volume but lower revenue per trip
+* Certain zones consistently generate higher revenue
+* Demand spikes during weekends and special events
+
+---
+
+## 💡 Business Recommendations
+
+* Implement dynamic pricing during peak hours
+* Optimize driver allocation in high-demand zones
+* Reduce low-efficiency trips through better routing strategies
+* Focus marketing efforts on high-revenue areas
+
+---
+
+## 📂 Project Structure
+
+* `data/` – Raw and cleaned datasets
+* `notebooks/` – Python analysis notebooks
+* `sql/` – SQL queries
+* `dashboard/` – Visualization files
+* `README.md` – Project documentation
+
+---
+
+## 📷 Dashboard Preview
+
+(Add screenshots here)
+
+---
+
+## 🚀 Conclusion
+
+This analysis demonstrates how data-driven insights can improve operational efficiency and profitability in ride-hailing services.
+
+---
+
+## 📬 Contact
+
+[Your Email / LinkedIn]
