@@ -1,4 +1,4 @@
-#🚖 NYC Taxi Data Analysis (2026) – HVFHV 
+🚖# NYC Taxi Data Analysis (2026) – HVFHV 
 
 FocusThe Analysis of High-Volume For Hire-Vehichle(HVFHV) mobility patterns in New York City. The objective was to examine how traffic flows, how much revenue is generated, and how well the services meet the needs of all passengers, including those requiring wheelchair-accessible vehicles. 
 Analysing mobility of New York Taxi, in the impact of high volume for hire vehicle, providing view for traffic trends in city, service provider impact, social awareness, geospatial analysis
