@@ -1,7 +1,5 @@
 # Data Quality Assessment: NYC FHV Trip Records (Q1 2026)
 
-**Analyst:** [Your Name]  
-**Date:** May 2026  
 **Source:** NYC TLC High Volume For-Hire Vehicle Trip Data  
 **Time Period:** January 1, 2026 - March 31, 2026  
 **Total Rows Examined:** 62,874,417
