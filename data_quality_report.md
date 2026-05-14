@@ -1,72 +1,16 @@
-# NYC For-Hire Vehicle Analytics: Q1 2026
+## Data Quality Summary
 
-**A data quality-focused analysis of 62.9M NYC taxi trips using Databricks and Power BI**
+| Validation | Finding | Action |
+|------------|---------|--------|
+| Zero-trip placeholders | 58 rows | ❌ Removed |
+| Speed outliers (>100 mph) | 22 rows | ❌ Removed |
+| Data errors (200+ miles, $0 pay) | 3 rows | ❌ Removed |
+| Exact duplicates | 132,712 rows (0.21%) | ❌ Removed |
+| Cancellations (negative fare) | 39,779 rows | ✅ Kept (flagged) |
+| WAV match flag | B03404/B03406 flood (4,649% rate) | ⚠️ Flagged - do not use |
+| Shared match flag | 56.6% match rate | ✅ Validated |
+| CBD congestion fee | 5.2M trips outside CBD zone | ⚠️ Flagged as potential issue |
 
----
+**Final clean rows:** 62,741,602 (99.79% of raw data)
 
-## Project Overview
-
-This project analyzes High Volume For-Hire Vehicle (FHV) trip data from New York City for January-March 2026. The focus is on data quality validation, identifying platform economics, operational efficiency, and accessibility metrics.
-
-**Key Technologies:** Databricks (PySpark), Delta Lake, Power BI, SQL
-
-**Dataset Size:** 62,874,417 raw rows → 62,741,602 cleaned rows (99.79% retention)
-
----
-
-## Business Questions Answered
-
-| Question | Dashboard Page |
-|----------|----------------|
-| What is the platform take rate across providers? | Platform Economics |
-| Which zones have the longest wait times? | Operations & SLA |
-| Where are WAV (wheelchair-accessible) vehicles most needed? | Accessibility |
-| How do congestion fees impact driver earnings? | Platform Economics |
-| What is the shared ride success rate? | Accessibility |
-
----
-
-## Data Source
-
-**NYC TLC High Volume FHV Trip Records** (Jan-Mar 2026)
-
-- **Source:** NYC Taxi & Limousine Commission
-- **Access:** Databricks Volume (Parquet format)
-- **TLC Disclaimer:** *"The TLC publishes base trip record data as submitted by the bases, and we cannot guarantee or confirm their accuracy or completeness."*
-
----
-
-## Data Quality Validation
-
-### Summary
-
-| Category | Count | % of Total | Decision |
-|----------|-------|------------|----------|
-| Zero-trip placeholders | 58 | 0.00009% | ❌ Removed |
-| Speed outliers (>100 mph for >5 miles) | 22 | 0.00003% | ❌ Removed |
-| Data errors (high miles + $0 pay) | 3 | 0.000005% | ❌ Removed |
-| Exact duplicates | 132,712 | 0.21% | ❌ Removed |
-| Cancellations (negative fare) | 39,779 | 0.06% | ✅ Kept (flagged) |
-| Negative driver pay | 20 | 0.00003% | ✅ Kept (flagged) |
-| Long-distance trips (>200 miles) | 13 | 0.00002% | ✅ Kept |
-| **Valid trips** | **62,741,602** | **99.79%** | ✅ Kept |
-
-### Unique Findings
-
-#### 1. WAV Match Flag Issue
-The `wav_match_flag` column was found to be populated as 'Y' for 100% of trips by bases B03404 and B03406 (the only bases in the dataset). This makes match rate calculation impossible.
-
-**Action:** Removed from match rate calculations. Display WAV request volume only (demand signal).
-
-#### 2. CBD Congestion Fee Geographic Discrepancy
-NYC CBD congestion fee ($1.50) applies to trips entering Manhattan below 60th St. Data shows 5,265,120 trips with CBD fee recorded outside designated CBD zones.
-
-**Action:** Flagged as potential data issue in documentation.
-
-#### 3. Shared Match Flag Validated
-Shared match flag shows 56.6% match rate with no flooding - confirmed trustworthy.
-
----
-
-## Pipeline Architecture
-
+📄 [Full Data Quality Report](DATA_QUALITY_REPORT.md)
