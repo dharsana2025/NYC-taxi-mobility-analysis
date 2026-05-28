@@ -1,4 +1,4 @@
-🚕 NYC Taxi Mobility Analysis — Q1 2026
+# 🚕 NYC Taxi Mobility Analysis — Q1 2026
 
 > End-to-end Big Data analytics pipeline analyzing 63 million NYC TLC trip records to model platform economics, operational efficiency, and revenue optimization opportunities across Uber and Lyft.
 
