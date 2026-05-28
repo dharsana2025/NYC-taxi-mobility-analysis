@@ -53,5 +53,3 @@ The objective of this project is to analyze **New York City HVFHV ride activity*
 - Revenue performance  
 - Operational efficiency  
 
-The findings are presented through an interactive dashboard to support data-driven transportation insights.
-```
